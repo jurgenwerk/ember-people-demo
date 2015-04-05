@@ -1,5 +1,5 @@
 <div class="person">
-  {{#if person.isNew}}
+  {{#if isEditing}}
     <p>
       Name: {{input value=person.name}}
     </p>
@@ -20,6 +20,8 @@
     <p>
       Profession: {{person.profession}}
     </p>
+    <button {{action 'toggleEdit'}}>Edit</button>
+    <button {{action 'delete' person}}>Delete</button>
   {{/if}}
 </div>
 {{yield}}

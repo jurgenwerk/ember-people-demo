@@ -1,8 +1,22 @@
 `import Ember from 'ember'`
 
 PersonItemComponent = Ember.Component.extend
+
+  edit: false
+
+  isEditing: (->
+    @get('person.isNew') || @get('edit')
+  ).property('person.content', 'edit')
+
   actions:
     save: (person) ->
-      person.save()
+      person.save().then =>
+        @set('edit', false)
+
+    delete: (person) ->
+      person.destroyRecord()
+
+    toggleEdit: ->
+      @toggleProperty('edit')
 
 `export default PersonItemComponent`
