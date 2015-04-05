@@ -1,0 +1,17 @@
+<h1>People</h1>
+
+Search: {{input value=filter}}
+
+{{#each person in filteredPeople}}
+  {{person-item person=person}}
+{{else}}
+  No people
+{{/each}}
+
+<br><br>
+
+<button {{action 'new'}}>
+  Add Person
+</button>
+
+{{outlet}}

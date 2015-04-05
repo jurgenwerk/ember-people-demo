@@ -1,3 +1,24 @@
 html, body {
   margin: 20px;
 }
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+}
+
+.person {
+  border-bottom: 1px solid #000;
+  margin-right: 10px;
+  width: 250px;
+  padding-bottom: 10px;
+}
+
+.new {
+  background: #2ecc71;
+}
+
+.edit {
+  background: #F6D6BC;
+}
