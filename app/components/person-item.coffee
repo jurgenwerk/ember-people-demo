@@ -11,7 +11,6 @@ PersonItemComponent = Ember.Component.extend
   actions:
     save: (person) ->
       person.save().then =>
-        debugger
         @set('edit', false)
 
     delete: (person) ->
