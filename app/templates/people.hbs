@@ -1,0 +1,15 @@
+<h1>People</h1>
+
+Search: {{input value=searchFilter}}
+
+<br><br>
+
+{{#each person in filteredPeople}}
+  {{person-item person=person}}
+{{/each}}
+
+<br><br>
+
+<button {{action 'new'}}>
+  Add Person
+</button>
