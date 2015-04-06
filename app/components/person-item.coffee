@@ -6,11 +6,12 @@ PersonItemComponent = Ember.Component.extend
 
   isEditing: (->
     @get('person.isNew') || @get('edit')
-  ).property('person.content', 'edit')
+  ).property('person.isNew', 'edit')
 
   actions:
     save: (person) ->
       person.save().then =>
+        debugger
         @set('edit', false)
 
     delete: (person) ->
