@@ -1,0 +1,24 @@
+{{#if isEditing}}
+  <div class="person">
+    <p>Name: {{input value=person.name}}</p>
+    <p>Last name: {{input value=person.last_name}}</p>
+    <p>Profession: {{input value=person.profession}}</p>
+    <button {{action 'save' person}}>
+      Save
+    </button>
+  </div>
+{{else}}
+  <div class="person">
+    <p>Name: {{person.name}}</p>
+    <p>Last name: {{person.last_name}}</p>
+    <p>Profession: {{person.profession}}</p>
+    <button {{action 'delete' person}}>
+      Delete
+    </button>
+    <button {{action 'edit'}}>
+      edit
+    </button>
+  </div>
+{{/if}}
+
+{{yield}}

@@ -1,0 +1,9 @@
+{{#each person in model}}
+  {{person-item person=person}}
+{{/each}}
+
+<br><br>
+
+<button {{action 'new'}}>
+  Add Person
+</button>
